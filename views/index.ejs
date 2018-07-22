@@ -1,0 +1,67 @@
+
+<% include partials/header.ejs %>
+<div class="container " id="header" >
+    <div class="row">
+        <div id="headerContent" >
+            <div class="col-md-2">
+             <img id="headerImage" class="float-left " src="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-2/16/57-512.png">
+
+            </div>
+            <div class="col-md-10">
+                <div id="headerDescription"  >
+                    <span >
+                        <h1>Welcome to A.G Blog</h1>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+<div class="container" id="mainContainer">
+    <div  class="container " >
+     
+            <% blogs.forEach(function(blog){ %>
+            <div  >
+                <div >
+                    <div class="row">
+                        <div id="indexImage" style="" class="col-lg-4 float-left">
+                        <img    style="height:100%;width:100%;" src="<%=blog.image%>" >
+                        </div>
+                        
+                        <div  class="col-lg-8">
+                            
+                            <span ><h2 ><%=blog.title%></h2></span>
+                            
+                            
+                            
+                            <span style="color:grey;"><%=blog.created.toDateString()%></span>
+                            <p><%=blog.body.substring(0,200)%>...</p>
+                            
+                            <!--The show details button-->
+                            <form action="/blogs/<%=blog._id %>" method="GET">
+                            <button class="ui animated button" tabindex="0">
+                                <div class="visible content">Show Details</div>
+                                <div class="hidden content">
+                                    <i class="file alternate outline icon"></i>
+                                </div>
+                                </button>
+                            </form>
+                            <!--end of button -->
+                            
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    <div >
+                            <hr style="border-color:white;">
+                    </div>
+            </div>
+    </div>
+            <% }) %>
+    </div>        
+</div>
+<%  include partials/footer.ejs %>

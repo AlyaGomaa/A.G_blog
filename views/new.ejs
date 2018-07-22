@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blogs!</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css" rel="stylesheet" type="text/css">
+        <link href="/stylesheets/app.css" rel="stylesheet" type="text/css">
+           <link rel="shortcut icon" type="image/x-icon" href="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-2/16/57-512.png" />
+
+    </head>
+    <body>
+        <div class="navBar" style="margin-bottom:20px;">
+            <div class="ui secondary inverted pointing menu container ">
+    <div class="header item"><i class="icon angle double right"></i>Blog Site</div>
+  
+    <a href="/" class=" item">
+      Home
+    </a>
+    <a href="/blogs/new"class="active item">
+      New
+    </a>
+    
+    
+  <div class="right menu">
+    <a href="https://www.facebook.com/AlyyaGomaa"class="ui item">
+      Contact Me
+    </a>
+  </div>
+</div>
+        </div>
+<!--end of header -->
+<div id="new" >
+
+    <div class="ui main text container segment">
+        <div class="ui huge header"> New Blog</div>
+            <form action="/blogs" method="POST" enctype="multipart/form-data" class="ui form">
+                
+                <div class="field">
+                    <label>Title:</label>
+                    <input placeholder="Title" name="blog[title]" type="text">
+    
+                </div>
+                
+                
+                <div class="field">
+                    <label>Image:</label>
+                    <input  name="image" type="file" required accept="image/*">
+    
+                </div>
+                <div class="field">
+                    <label>Blog content::</label>
+                    <textarea name="blog[body]"> </textarea>
+                </div>
+                <!--The button -->
+                <button style="width:100%;" class="ui animated button" tabindex="0">
+                  <div id="submitButton"class="visible content">Submit</div>
+                  <div class="hidden content">
+                    <i class="right arrow icon"></i>
+                  </div>
+                </button>
+                
+            </form>
+    </div>
+</div>
+<% include partials/footer.ejs %>

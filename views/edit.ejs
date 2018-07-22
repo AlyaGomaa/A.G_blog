@@ -1,0 +1,31 @@
+<% include partials/header.ejs %>
+<div class="ui main text container segment">
+    <div class="ui huge header"> Edit <%= blog.title%></div>
+        <form action="/blogs/<%=blog._id%>?_method=PUT" method="POST" class="ui form">
+            
+            <div class="field">
+                <label>Title:</label>
+                <input value="<%=blog.title%>" name="blog[title]" type="text">
+
+            </div>
+            
+            <div class="field">
+                <label>Image:</label>
+                <input value="<%=blog.image%>" name="blog[image]" type="text">
+
+            </div>
+            <div class="field">
+                <label>Blog content::</label>
+                <textarea name="blog[body]"> <%-blog.body %> </textarea>
+            </div>
+            <!--The button -->
+            <button style="width:100%;" class="ui animated button" tabindex="0">
+              <div id="submitButton"class="visible content">Submit</div>
+              <div class="hidden content">
+                <i class="right arrow icon"></i>
+              </div>
+            </button>
+            
+        </form>
+</div>
+<% include partials/footer.ejs %>

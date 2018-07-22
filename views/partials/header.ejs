@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A.G Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css" rel="stylesheet" type="text/css">
+        <link href="/stylesheets/app.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="https://cdn1.iconfinder.com/data/icons/mini-solid-icons-vol-2/16/57-512.png" />
+
+    </head>
+    <body>
+      <div class="navBar">
+<div class="ui inverted secondary pointing menu container">
+  
+    <a href="/blogs"><div class="header item"><i class="icon angle double right"></i>Blog</div></a>
+    
+    <a href="/" class=" active item">
+      Home
+    </a>
+    <a href="/blogs/new"class=" item">
+      New
+    </a>
+    
+    <div class="right menu">
+      <a href="https://www.facebook.com/AlyyaGomaa" class="ui item">
+        Contact Me
+      </a>
+    </div>
+</div>
+</div> <!--bta3 elnavbar-->
+<!--warningss-->
+<% if(error && error.length>0){ %>
+     <div class="ui warning message">
+      <div class="header">
+        <%=error%>
+      </div>
+    </div>
+ 
+ <% } %> 
+  
