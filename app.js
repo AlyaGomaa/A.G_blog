@@ -8,7 +8,8 @@ var expressSanitizer=require("express-sanitizer");
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 //app config
-mongoose.connect("mongodb://localhost/restful_blog_app");
+mongoose.connect("mongodb://alyagomaa:alyagomaa2@ds145981.mlab.com:45981/ag_blog");
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public")); // bta3 elstylesheets
