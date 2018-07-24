@@ -13,30 +13,18 @@ body{
     background-color:#252525;
 
 }
-#header{
-    background-image:url("https://wallpaperstock.net/wallpapers/thumbs1/43510hd.png");
-    padding:20px 20px;
-}
-#headerImage{
-    height:270px;
-    width:270px;
-    margin-right:30px;
-}
- #headerDescription {
-    padding-top:6%;
-    color:#252525;
- }
- #indexImage{
-     
-     border-radius:3px;border:white solid 2px;padding:0;
- }
 
+#header{
+    
+    padding:0;
+    height:55%;
+    background-size:100% 110%;
+    background-image:url("https://i.imgur.com/pLJUHsl.jpg");
+}
 @media only screen and (max-width:768px){
     /*for mobile screens */
-    #headerImage{
-    height:40%;
-    width:40%;
-        
+    #header{
+        background-size: cover;
     }
     
 }
